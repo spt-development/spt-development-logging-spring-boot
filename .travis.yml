@@ -1,7 +1,7 @@
 language: java
 
 jdk:
-  - openjdk15
+  - openjdk8
 
 script:
   - mvn test -B
@@ -15,7 +15,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: DV3NL+lLQd/QZaDCr5qTJphiP7TLwTz8fozEP42Ub555dhsf0yTMxleWuOTVpuGMnvWiwO9T0E7QKYh+nIOmaIWLCE8KGw3PwFkhvg9PzYZn0XqrySzqAj1MZy3HpnNaiGyoRywae72AUwQ+t+fvL41TcHcREUGX/106+NXnOzXRDOFXOtPb3krQ8Ut1EN9iIRM9qc7dkKr8tF++SgQaTpitgvuA1ng7QAUv+L9PyKyEjdVGCEXDaaxSIvH7wV4/9Ouy/wgSDLxF6EK4Wg4jk11dqw/yg4k9OEl1iqobQPoTP9XHjN0a0nnISROi/qUrdCfBKxko87pJ+usi4tRPbgNVBdL65FGoucglYPyaWS7IRxtX2jiGYFMHpF8q2SyVjXjukkIEHoUh6rNRfn+NUIhVBuzmQDYqBIgcJTQ1BmdmarPsPHeAnGzO3aEZOHkfJppLsDwRJxdqdsbUu0m3vC7jFPZdIUNZ2r1mboGBxqaQegqZwj7ChiK55sZ7SL3NFOZRiO9dQY93yqiiW4/p/JBO04b+aOBDQoPcmLSSxrKaqeskvYUkQew39PeBddT2CYZJVVODWAavKK1YZrekshiFs/PWmvCo6j6OuP7PPhbVMWTucAejPwRv26Paa41hLEUVQMAh6XW6RBlABCxfDKwJ4aYWvleHiI7rY+9skoE=
+    secure: tNrgQeaH6gn+JH2IV7DqJ3oaGgQYMvku8mAmuKZMqg/TLkWbopeaaO9SK83SOOqnj9QL25rSan/THFBtofa8nd3SACGP0+eAzhNRyRHZ7HET/Na2BPS2uhcDMsKSv27dv16BXqRDSs/rAh76CKg54KlU5Oik/zoET78/KMawuREpgojT41znCrFfNNvYEo6wmkBxE2P3g4Wdrd8nmcHGkyHbIV0NQOcE0myhbR0wAzqoydavCiWBwSE1m1GjDaejJaq1Od/HL4WrjCkBptx4qldOZG866lFA037CHUAkBWu8Rs8n8AlMgY22gykzQwriX+Xy8+/f05/Oj+ldoAr8IewzmM1JohwHmJpnaq5TLzfLYIOxjEhne2SvUMcXIHPYtWQ3bvvsXBxPnWdiXz0HWgNF2gC2dJrBlaarfI+Vcw1mCsir0fJFWUIStvLHIlSnK5DNbU5MQ1kJrHP01YwOTLTVYxFNWgxT+9eGUMrvPgyskflya5iRTJdkNWde3czl4XdEQ+XxuYs8v6EBliMYD3nqf6/K/37E1AUOh//QXFtZCna8Rkbfhuc/PWAA8Us7XtAZDkTAh8YF2LrYh9pw7U0wxunD1zLCpB4lq8KjqaAP81lRXEfjq/IvjpU0Qw+JLSH54JO9yuxqq6kyCCWbzt3s5weP3Vl7IY4Oaobriv4=
   file:
     - "spt-development-logging-spring-boot-autoconfigure/target/spt-development-logging-spring-boot-autoconfigure-${POM_VERSION}.jar"
     - "spt-development-logging-spring-boot-starter/target/spt-development-logging-spring-boot-starter-${POM_VERSION}.jar"
