@@ -4,18 +4,18 @@ import com.spt.development.logging.spring.JmsListenerLogger;
 import com.spt.development.logging.spring.RepositoryLogger;
 import com.spt.development.logging.spring.RestControllerLogger;
 import com.spt.development.logging.spring.ServiceLogger;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * {@link org.springframework.boot.autoconfigure.EnableAutoConfiguration Auto-Configuration} for
+ * {@link AutoConfiguration Auto-Configuration} for
  * <a href="https://github.com/spt-development/spt-development-logging-spring">spt-development/spt-development-logging-spring</a>.
  */
-@Configuration
+@AutoConfiguration
 public class LoggingSpringAutoConfiguration {
 
     /**
