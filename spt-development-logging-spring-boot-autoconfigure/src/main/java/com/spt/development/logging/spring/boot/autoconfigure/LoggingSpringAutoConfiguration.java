@@ -59,7 +59,7 @@ public class LoggingSpringAutoConfiguration {
 
     /**
      * Creates a {@link ServiceLogger} (aspect) bean. If the <code>spt.cid.mdc.disabled</code> property is set to
-     * <true>true</true>, the correlation ID will be included in the generated log statements.
+     * <code>true</code>, the correlation ID will be included in the generated log statements.
      *
      * @return a new {@link ServiceLogger} bean.
      */
