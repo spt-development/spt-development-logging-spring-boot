@@ -1,5 +1,6 @@
 package com.spt.development.logging.spring.boot.autoconfigure;
 
+import com.spt.development.logging.spring.DaoSupportLogger;
 import com.spt.development.logging.spring.JmsListenerLogger;
 import com.spt.development.logging.spring.RepositoryLogger;
 import com.spt.development.logging.spring.RestControllerLogger;
@@ -8,7 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
+import org.springframework.dao.support.DaoSupport;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -79,5 +82,19 @@ public class LoggingSpringAutoConfiguration {
     @ConditionalOnMissingBean
     public RepositoryLogger repositoryLogger() {
         return new RepositoryLogger(mdcDisabled);
+    }
+
+    /**
+     * Creates a vanilla {@link DaoSupportLogger} (aspect) bean.  If the <code>spt.cid.mdc.disabled</code> property is
+     * set to <code>true</code>, the correlation ID will be included in the generated log statements.
+     *
+     * @return a new {@link DaoSupportLogger} bean.
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    @ConditionalOnClass({ DaoSupport.class })
+    @ConditionalOnProperty(value = "spt.logging.dao-support.enabled", havingValue = "true")
+    public DaoSupportLogger daoSupportLogger() {
+        return new DaoSupportLogger(mdcDisabled);
     }
 }

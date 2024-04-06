@@ -42,7 +42,7 @@
         <!-- Dependency versions -->
         <spring-boot.version>3.2.4</spring-boot.version>
         <spt-cid.version>2.0.14</spt-cid.version>
-        <spt-logging-spring.version>3.0.16</spt-logging-spring.version>
+        <spt-logging-spring.version>3.0.17-SNAPSHOT</spt-logging-spring.version>
 
         <!-- Plugin versions -->
         <build-helper-maven-plugin.version>3.5.0</build-helper-maven-plugin.version>
