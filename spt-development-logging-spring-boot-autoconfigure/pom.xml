@@ -67,6 +67,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spring test dependencies - version defined in spring-boot bom, import in parent dependencyManagement section -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- Test dependencies not directly related to testing - version defined in spring-boot bom, import in parent dependencyManagement section -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
